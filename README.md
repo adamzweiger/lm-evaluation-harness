@@ -80,6 +80,12 @@ lm_eval --model hf \
     --batch_size 8
 ```
 
+lm_eval --model hf \
+    --model_args pretrained=meta-llama/Llama-3.2-1B-Instruct \
+    --tasks hellaswag \
+    --device cuda:0 \
+    --batch_size 8
+
 Additional arguments can be provided to the model constructor using the `--model_args` flag. Most notably, this supports the common practice of using the `revisions` feature on the Hub to store partially trained checkpoints, or to specify the datatype for running a model:
 
 ```bash
