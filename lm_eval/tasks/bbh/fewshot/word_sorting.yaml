@@ -17,3 +17,11 @@ fewshot_config:
     target: arson aspect census mugho newt parthia seismography
 include: _fewshot_template_yaml
 task: bbh_fewshot_word_sorting
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "word_sort"
+      - function: "take_first"
