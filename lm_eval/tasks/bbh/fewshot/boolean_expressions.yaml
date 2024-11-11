@@ -3,9 +3,7 @@ description: 'Evaluate the result of a random Boolean expression.
 
 
   '
-doc_to_text: 'Q: {{input}}
-
-  A:'
+doc_to_text: "Q: {{input}}\nA:"
 fewshot_config:
   sampler: first_n
   samples:
