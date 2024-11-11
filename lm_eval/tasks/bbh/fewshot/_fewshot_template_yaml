@@ -26,7 +26,7 @@ filter_list:
   - name: "get-answer"
     filter:
       - function: "regex"
-        regex_pattern: "(?<=A: )(.*?)(?=\\n|$)"
+        regex_pattern: "(?<=A: )(.*)(?=.)"
       - function: "take_first"
 metadata:
   version: 3.0
