@@ -23,14 +23,10 @@ generation_kwargs:
   temperature: 0.0
 num_fewshot: 3
 filter_list:
-  - name: "strict-match"
-    filter:
-      - function: "take_first"
-  - name: "flexible-extract"
+  - name: "get-answer"
     filter:
       - function: "regex"
-        group_select: 0
-        regex_pattern: "\\b(True|False)\\b"
+        regex_pattern: "(?<=A: )(.*?)(?=\\n|$)"
       - function: "take_first"
 metadata:
   version: 3.0
